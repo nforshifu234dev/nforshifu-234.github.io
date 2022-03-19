@@ -1,0 +1,153 @@
+@import url('fonts.css');
+
+:root{
+    --white-color: rgb(255, 255, 255);
+    --black-color: rgb(29 28 28);
+    --social-media-icon-color:rgb(238, 236, 236);
+}
+
+.light-theme{
+    --white-color:rgb(29 28 28);
+    --black-color:rgb(255, 255, 255);
+    --social-media-icon-color:rgb(29 28 28);
+}
+
+body{
+    background: var(--black-color) ;
+    /* background: var(--white-color) !important; */
+    font-family: fontOne ,sans-serif;
+    transition: 2s background;
+}
+
+
+.db{
+    display: block !important;
+}
+
+.header{
+    position: relative;
+    color: var(--black-color);
+}
+
+.header .social-media-icons{
+    /* background: red; */
+    height: max-content;
+    /* max-width: 30%; */
+    padding: 0.5rem;
+    
+}
+
+.logo{
+    transition: 2s;
+}
+
+.social-media-icon{
+    color: var(--social-media-icon-color) !important;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    cursor: pointer;
+    /* transition: 1s color; */
+    /* background-color: gold; */
+    transition: 2s display;
+}
+
+.social-media-icon span{
+    display: none;
+    transition: 2s display !important;
+}
+
+.social-media-icon:hover{
+    color: rgb(184, 183, 183) !important;
+    /* transition: 1s ease-in-out display; */
+}
+
+.social-media-icon:hover.social-media-icon span{
+    display: inline-block;
+}
+
+
+
+.responsive-icon{
+    display: none;
+}
+
+
+.description small{
+    margin: 5px 0;
+    color: var(--white-color);
+}
+
+.description .copyright{
+    font-weight: 800;
+}
+
+.card-title{
+    font-family: fontOne;
+}
+
+.project-date,
+.description small{
+    font-family: fontTwo;
+}
+
+.project-description{
+    font-family: fontFour;
+}
+
+.welcome-message{
+    font-family: fontTwo;
+    color: var(--white-color);
+}
+
+.category{
+    font-family: fontThree;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--black-color);
+}
+
+#lightBtn.light-btn-on {
+    background-color: var(--white-color);
+}
+
+.card{
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+@media screen and (max-width:700px) {
+    .header .social-media-icons{
+        display: none;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        height: max-content;
+        z-index: 50;
+        top: 100%;
+        padding: 0.5rem;
+        background-color: #000;
+        border-radius: 10px;
+    }
+    .header .social-media-icon{
+        /* display: block; */
+        width: 100%;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .header .social-media-icon span{
+        margin-left: 10px;
+        font-family: fontOne;
+        display: block;
+    }
+
+    .responsive-icon{
+        fill: var(--white-color);
+        display: block;
+        cursor: pointer;
+        transform: rotate(90deg);
+    }
+}

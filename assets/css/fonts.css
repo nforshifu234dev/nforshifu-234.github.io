@@ -1,0 +1,16 @@
+@font-face {
+    font-family: fontOne;
+    src: url('../fonts/Lobster-Regular.ttf');
+}
+@font-face {
+    font-family: fontTwo;
+    src: url('../fonts/NotoSerifDisplay-Italic-VariableFont_wdth-wght.ttf');
+}
+@font-face {
+    font-family: fontThree;
+    src: url('../fonts/DancingScript-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: fontFour;
+    src: url('../fonts/Arvo-Regular.ttf');
+}
