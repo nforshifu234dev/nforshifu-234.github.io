@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/img/square-logo.png" type="image/gif" sizes="400x2000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysterio Official - by nforshifu_234✌😜 </title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <a href="">
+                <img src="assets/img/logo.png" alt="logo" class="logo">
+            </a>
+
+            <div class="responsive-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" width="50" height="50"><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-custom-link"/><link xmlns="" type="text/css" rel="stylesheet" id="dark-mode-general-link"/><style xmlns="" lang="en" type="text/css" id="dark-mode-custom-style"/><style xmlns="" lang="en" type="text/css" id="dark-mode-native-style"/><script xmlns="">(function(){window['_docs_annotate_canvas_by_ext']='kohfgcgbkjodfcfkcackpagifgbcmimk';})();</script><path d="M8.5,10a2,2,0,1,0,2,2A2,2,0,0,0,8.5,10Zm0,7a2,2,0,1,0,2,2A2,2,0,0,0,8.5,17Zm7-10a2,2,0,1,0-2-2A2,2,0,0,0,15.5,7Zm-7-4a2,2,0,1,0,2,2A2,2,0,0,0,8.5,3Zm7,14a2,2,0,1,0,2,2A2,2,0,0,0,15.5,17Zm0-7a2,2,0,1,0,2,2A2,2,0,0,0,15.5,10Z"/></svg>
+            </div>
+
+            <ul class="nav-list" id="navList">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Specification</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left-col">
+                <h1>THE <br> REAL <br> SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen Now!!!</p>
+                <!-- <img src="play.jpeg" id="icon"> -->
+                <div class="play" id="icon">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"/></svg>
+                </div>
+                
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">
+                Copyright &copy; 2022 NFORSHIFU234✌😜
+            </div>
+
+            <div class="credit">
+                Music by <a href="http://" target="_blank" rel="noopener noreferrer">DJ Mys3io</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <audio id="mysong">
+        <source src="Blessed.mp3" type="audio/mp3">
+    </audio>
+    
+   <script>
+       var mysong = document.getElementById("mysong");
+       var icon =  document.getElementById("icon");
+
+       //Here we will be checking if the play icon is clicked    
+       icon.onclick= function()
+        {
+            /*
+             Here we are just checking if the song is playing or not
+             If the song is playing(true/.play), it will pause the music and display the play icon
+             If the song is NOT playing(false/.paused), it will play the music and display the pause icon
+            */
+           if(mysong.paused){
+               mysong.play();
+               icon.innerHTML="<svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM224 191.1v128C224 337.7 209.7 352 192 352S160 337.7 160 320V191.1C160 174.3 174.3 160 191.1 160S224 174.3 224 191.1zM352 191.1v128C352 337.7 337.7 352 320 352S288 337.7 288 320V191.1C288 174.3 302.3 160 319.1 160S352 174.3 352 191.1z'/></svg>";
+           }else{
+            mysong.pause();
+               icon.innerHTML="<svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z'/></svg>";
+           }
+        }
+
+        // Here we added an Event Listener to listen for a click on the responsive icon
+       document.querySelector('.responsive-icon').addEventListener('click', toggleResponsiveMenu);
+
+       //All what this function does is to just toggke between the "db" class in our css file. 
+      //if the function is true, it will show the menu else it will not show it.    
+       function toggleResponsiveMenu()
+       {
+            document.getElementById("navList").classList.toggle('db');
+       }
+
+    </script>
+
+  
+
+</body>
+</html>
