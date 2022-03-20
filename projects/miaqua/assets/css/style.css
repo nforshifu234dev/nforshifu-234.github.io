@@ -74,7 +74,6 @@ a {
 .home-slider .slide img {
     height: 100%;
     width: 100%;
-    /* display: none; */
 }
 
 .home-slider .slide .captions {
@@ -102,7 +101,6 @@ a {
     position: absolute;
     top: 45%;
     transform: translateY(-70%);
-    /* background: var(--primary-color); */
     font-size: 7rem;
     padding: 0;
     margin: 0;
@@ -122,7 +120,6 @@ a {
     position: absolute;
     bottom: 25%;
     left: 50%;
-    /* background: red; */
     transform: translateX(-50%);
 }
 
@@ -147,15 +144,10 @@ a {
 
     overflow: hidden;
     height: 250px;
-    /* border-radius: 50%; */
-    /* position: absolute; */
-    /* right: 0; */
-    /* bottom: 15px; */
 }
 
 .rvm-prsn-img img {
     width: 20px;
-    /* height: 100%; */
     border-radius: 10%;
 }
 
@@ -168,14 +160,7 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 0.8rem;
     margin-bottom: 0.7rem;
-    /* border-top-left-radius: 40%; */
-    /* border-bottom-right-radius: 40%; */
-    /* border-top-right-radius: 40%; */
 }
-
-/* .rvw-method {
-    margin-right: 2.7rem;
-} */
 
 .offrs-crd img {
     transform: scale(1);
@@ -226,10 +211,7 @@ a {
 
 .nws-ltr {
     padding: 5rem 5rem;
-    /* background: url('C:\xampp\htdocs\personal\online_projects\miaqua\img\conner-baker-wv4Pu-Jjdbw-unsplash.jpg'); */
-    /* background-size: 100% 120%; */
-    background:linear-gradient(rgb(0, 0, 139, 0.4) , rgb(173, 216, 230, 0.2)), url('./img/conner-baker-wv4Pu-Jjdbw-unsplash.jpg'), linear-gradient(darkblue , lightblue);
-    /* background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url('../img/pexels-life-of-pix-67468.jpg'); */
+    background:linear-gradient(rgb(0, 0, 139, 0.4) , rgb(173, 216, 230, 0.2)), url('assets/img/conner-baker-wv4Pu-Jjdbw-unsplash.jpg'), linear-gradient(darkblue , lightblue);
     background-size: cover;
 }
 
@@ -252,7 +234,6 @@ footer {
     color: var(--text-color);
     margin-top: 2rem;
     height: 100%;
-    /* padding-bottom: 1rem; */
 }
 
 .scmi {
@@ -378,19 +359,6 @@ footer ul li {
         margin: 0 !important;
     }
 }
-
-/* @media (max-width: 576px) {
-    .home-slider .slide {
-        margin-top: 22.5%;
-    }
-} */
-
-/* @media (max-width: 768px) {
-    .home-slider .slide {
-        margin-top: 15%;
-        margin-bottom: 15%;
-    }
-} */
 
 @media (min-width: 992px) {
     .container,
