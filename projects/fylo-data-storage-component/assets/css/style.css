@@ -1,0 +1,440 @@
+
+/* IMPORTING FONT CSS FILE */
+@import url(fonts.css);
+
+                                                    
+                                         
+/* END IMPORTING FONT */
+
+/* SETTING DEFAULT CSS RULE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* END SETTING DEFAULT CSS RULE */
+
+/* CREATING ROOT VARIABLES */
+
+:root
+{
+    --primary-color: hsl(6, 100%, 80%) to hsl(335, 100%, 65%) ;
+    --pale-blue:hsl(243, 100%, 93%);
+    --grayish-blue:hsl(229, 7%, 55%);
+    --dark-blue:hsl(228, 56%, 26%);
+    --very-dark-blue:hsl(229, 57%, 11%);
+}
+
+/* END CREATING ROOT VARIABLES */
+
+/* 
+    -> Here I am making the body and the container tag to occupy 100vw and 100vh of the screen as it's width and height
+    -> Also I added overflow:hidden; so that if any unnessary scrolling appears it won't occur
+*/
+
+::selection
+{
+    background: hsl(6, 100%, 80%);
+    color: rgb(255, 255, 255);
+}
+
+body,
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    font-family: Raleway-Regular;
+}
+
+/* STYLING THE CONTAINER */
+
+    .container
+    {
+        background: url("http://nforshifu.com/images/stars.png"), url("../images/bg-desktop.png") var(--very-dark-blue) ;
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+        background-size: cover, contain;
+
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+    }
+
+    .container .contents
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10%;
+        /* background: url("http://nforshifu.com/images/stars.png"), transparent; */
+        /* border: red solid 2px; */
+    }
+
+    /* STYLING THE LEFT & RIGHT CONTAINER */
+
+        .container .right,
+        .container .left
+        {
+            position: relative;
+            background: var(--dark-blue);
+            height: max-content;
+            margin: auto 0 0;
+            min-width: 300px;
+            padding: 2rem;
+        }
+
+        /* STYLING THE LEFT CONTAINER */
+
+            .container .left
+            {
+                margin-right: 20px;
+                border-radius: 10px;
+                border-top-right-radius: 100px;
+                height: 200px;
+                /* width: 350px; */
+                padding-top: 3rem;
+                box-shadow: 0 0 3px 2px rgb(255, 255, 255);
+            }
+            
+            .container .left .logo
+            {
+                margin-bottom: 30px;
+            }
+
+            .container .left .logo img
+            {
+                width: 50%;
+            }
+
+            .container .left .icons
+            {
+                display: flex;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                /* padding-top: 12px; */
+                /* border: red solid 2px; */
+            }
+
+            .container .left .icons .icon
+            {
+                background: var(--very-dark-blue);
+                /* padding: 0.5rem; */
+                border-radius: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 7px;
+                width:  45px;
+                height: 45px;
+                transition: margin-bottom 0.5s ease-in-out;
+            }
+
+            .container .left .icons .icon:hover
+            {
+                margin-bottom: 15px;
+            }
+
+            .container .left .icons .icon:first-of-type
+            {
+                margin-left: 0;
+            }
+
+            .container .left .icons .icon img
+            {
+                width: 50%;
+            }
+
+        /* END STYLING THE LEFT CONTAINER */
+
+        /* STYLING THE RIGHT CONTAINER */
+
+            .container .right
+            {
+                width: 500px;
+                height: 150px;
+                border-radius: 10px;
+                color: var(--pale-blue);
+                padding: 3rem;
+                position: relative;
+                box-shadow: 2px -2px 3px 2px rgb(255, 255, 255);
+            }
+
+            .container .right .text
+            {
+                text-transform: capitalize;
+                font-size: clamp(10px, 4vw, 0.6rem) ;
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+            }
+
+            .container .right .text :is(span, mark)
+            {
+                font-weight: bolder;
+                /* font-size: calc(100% + 0.5rem) ; */
+                color: hsl(6, 100%, 80%);
+            }
+
+        /* END STYLING THE RIGHT CONTAINER */
+
+        /* STYLING THE RANGE SLIDER */
+
+        
+            .container .right .amount-of-space-left-range-slider
+            {
+
+            }
+
+            .container .right .amount-of-space-left-range-slider .amount-of-space-left-range
+            {
+                height: 20px;
+                width: 100%;
+                /* border: red solid 2px; */
+                border-radius: 20px;
+                background: rgb(0,0,0,0.5) ;
+                padding: 0.2rem;
+                position: relative;
+                /* display: flex; */
+                /* align-items: center; */
+            }
+
+            .container .right .amount-of-space-left-range-slider .amount-of-space-left-range .range
+            {
+                height: 100%;
+                width: 81.5%;
+                /* border: red solid 2px; */
+                border-radius: 10px;
+                background: linear-gradient(hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+            }
+            
+            .container .right .amount-of-space-left-range-slider .amount-of-space-left-range .dot
+            {
+                position: absolute;
+                top: 25%;
+                left: 78%;
+                height: 10px;
+                width:  10px;
+                border-radius: 50%;
+                background: rgb(255, 255, 255);
+            }
+
+            .range-slider-texts
+            {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                font-weight: bolder;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-size: clamp(10px, 4vw, 0.5rem) ;
+                width: 110%;
+                margin-left: -10px;
+                /* border: red solid 2px; */
+            }
+
+            .range-slider-texts .range-slider-text
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* border: red solid 2px; */
+            }
+
+            .range-slider-texts .range-slider-text:last-of-type
+            {
+                margin-right: 5px;
+            }
+
+            .range-slider-texts .range-slider-text span
+            {
+                margin-bottom: 7px;
+            }
+
+
+            /* BUBBLE FOR AMOUNT OF SPACE LEFT AREA */
+
+            .bubble-amount-of-space-left
+            {
+                position: absolute;
+                bottom: 90%;
+                right:  10px;
+                /* background: red; */
+            }
+
+            .bubble-amount-of-space-left .amount-of-space-left
+            {
+                width: max-content;
+                height: max-content;
+                position: relative;
+            }
+
+            .bubble-amount-of-space-left .amount-of-space-left .bubble
+            {
+                /* margin: 40px; */
+                display: inline-block;
+                position: relative;
+                width: 200px;
+                height: auto;
+                border-radius: 10px;
+                border-bottom-right-radius: 0px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: -3px 3px 5px 0px rgb(255, 255, 255);
+            }
+
+            .bubble-amount-of-space-left.amount-of-space-left.bubble:before {
+                content: ' ';
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: auto;
+                right: -8px;
+                bottom: -40px;
+                border: 20px solid;
+                border-color: #666 #666 transparent transparent;
+                box-shadow: -3px 3px 5px 0px rgb(255, 255, 255);
+            }
+
+            .bubble-amount-of-space-left .amount-of-space-left .bubble:after{
+                content: ' ';
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: auto;
+                right: 0px;
+                bottom: -20px;
+                border: 12px solid;
+                border-color: rgb(255, 255, 255) rgb(255, 255, 255) transparent transparent;
+            }
+
+            .bubble-amount-of-space-left .amount-of-space-left .bubble .text
+            {
+                padding: 1em;
+                /* text-align: left; */
+                /* line-height: 1.5em; */
+                color: var(--grayish-blue);
+                text-transform: uppercase;
+                font-family: Raleway-ExtraBold;
+                font-weight: 800;
+                display: flex;
+                align-items: center;
+                font-size: clamp(0.5rem, 4vw, 0.7rem);
+            }
+
+            .bubble-amount-of-space-left .amount-of-space-left .bubble .text span
+            {
+                color: var(--dark-blue);
+                font-weight: 900;
+                font-size: clamp(1rem, 4vw, 2.5rem);
+                font-family: Raleway-ExtraBold;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            .bubble-amount-of-space-left .amount-of-space-left .bubble .text span svg
+            {
+                width:  30px;
+                height: 30px;
+                margin-right: 10px;
+                fill: currentColor;
+            }
+
+            /* END BUBBLE FOR AMOUNT OF SPACE LEFT AREA */
+
+        /* END STYLING THE RANGE SLIDER */
+
+    /* END STYLING THE LEFT & RIGHT CONTAINER */
+
+    /* ATTRIBUTION */
+    
+        .attribution
+        {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 1rem;
+            background: rgb(255, 255, 255);
+            letter-spacing: 2px;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        .attribution a
+        {
+            color: hsl(6, 100%, 80%);
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        .attribution a:hover
+        {
+            color: hsl(335, 100%, 65%);
+        }
+
+
+    /* END ATTRIBUTION */
+
+    /* USER PROFILE ICON */
+
+        .user-profile-icon
+        {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 40px;
+            width:  40px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 3px rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            transition: box-shadow 0.7s ease-in-out;
+        }
+        
+        .user-profile-icon:hover
+        {
+            box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+        }
+
+        .user-profile-icon svg
+        {
+            width: 50%;
+            height: 50%;
+            fill: currentColor;
+        }
+
+    /* END USER PROFILE ICON */
+
+
+    /* STYLING FOR MY LOGO */
+
+        .my-logo
+        {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            /* height: 40px; */
+            width:  90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            /* border: 1px solid rgb(255, 255, 255); */
+            /* box-shadow: 0 0 5px 3px rgb(255, 255, 255); */
+        }
+
+        .my-logo img
+        {
+            width: 100%;
+        }
+
+    /* STYLING FOR MY LOGO */
+
+/* END STYLING THE CONTAINER */

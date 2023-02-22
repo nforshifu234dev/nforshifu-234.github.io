@@ -1,0 +1,117 @@
+/* RESPONSIVE STYLING FOR ALL DEVICES THAT ARE TABLET AND BELOW */
+
+@media screen and (max-width:768px) {
+    
+    .container .contents
+    {
+        flex-direction: column;
+        -ms-flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: url("http://nforshifu.com/images/stars.png"), url("../images/bg-mobile.png"), var(--dark-blue);
+        background-repeat: no-repeat;
+        background-size: cover, cover;
+        background-position: center;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 0%;
+    }
+
+    .container .right,
+    .container .left
+    {
+        width: 100%;
+        border: red solid 2px;
+        margin-bottom: 0;
+        margin: 20px 0;
+    }
+
+    .container .left .logo img
+    {
+        width: 22.5%;
+    }
+
+    .container .right
+    {
+        box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+        height: 180px;
+        padding: 2rem;
+    }
+
+    .container .right .text
+    {
+        /* border: red solid 2px; */
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .bubble-amount-of-space-left
+    {
+        top: 80%;
+        left: 0;
+        width: max-content;
+        height: max-content;
+        text-align: center;
+        /* border: red solid 2px; */
+        margin: 0 auto;
+    }
+
+    .bubble-amount-of-space-left .amount-of-space-left .bubble
+    {
+        margin: 0;
+        width: 250px;
+        height: 70px;
+        /* border-bottom-right-radius: 0px; */
+        border-radius: 10px;
+    }
+
+    .bubble-amount-of-space-left.amount-of-space-left.bubble:before,
+    .bubble-amount-of-space-left .amount-of-space-left .bubble:after 
+    {
+        border: none;
+    }
+
+    .bubble-amount-of-space-left .amount-of-space-left .bubble .text
+    {
+        /* border: red solid 2px; */
+        height: 100%;
+        justify-content: center;
+        font-size: calc(100% + 0.1rem);
+    }
+
+    .bubble-amount-of-space-left .amount-of-space-left .bubble .text span
+    {
+        font-size: calc(100% + 1.5rem);
+    }
+
+    .my-logo
+    {
+        width:  70px;
+        height: 70px;
+    }
+
+    .my-logo img
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+}
+
+/* END RESPONSIVE STYLING FOR ALL DEVICES THAT ARE TABLET AND BELOW */
+
+/* RESPONSIVE STYLING FOR ALL DEVICES THAT ARE LAPTOP AND ABOVE */
+/* END RESPONSIVE STYLING FOR ALL DEVICES THAT ARE LAPTOP AND ABOVE */
+
+/* MOBILE (min-width: 320px and max-width: 480px)  */
+
+/* TABLET (min-width: 481px and max-width: 768px) */
+
+/* LAPTOP (min-width: 769px and max-width: 1023px) */
+
+/* DESKTOP (LARGE) (min-width:1024px and max-width:1200px) */
+
+/* TV / EXTRA LARGE SCREENS (min-width: 1201px) */
